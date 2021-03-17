@@ -16,5 +16,50 @@ namespace InterfaceExample
         {
             InitializeComponent();
         }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+
+
+
+            iPlayerManage player;
+
+            if (comboBox1.Text== "Mp3 CD")
+            {
+                 player = new AudioManage();
+                this.Text = player.Play();
+            }
+
+            else if (comboBox1.Text == "Video CD")
+            {
+                 player = new VideoManage();
+                this.Text = player.Play();
+            }
+            else
+            {
+                MessageBox.Show("Please insert CD");
+            }
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            iPlayerManage player;
+
+            if (comboBox1.Text == "Mp3 CD")
+            {
+                player = new AudioManage();
+                this.Text = player.Stop();
+            }
+
+            else if (comboBox1.Text == "Video CD")
+            {
+                player = new VideoManage();
+                this.Text = player.Stop();
+            }
+            else
+            {
+                MessageBox.Show("Please insert CD");
+            }
+        }
     }
 }
