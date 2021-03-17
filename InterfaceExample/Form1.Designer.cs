@@ -29,20 +29,35 @@ namespace InterfaceExample
         /// </summary>
         private void InitializeComponent()
         {
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Mp3 CD",
+            "Video CD"});
+            this.comboBox1.Location = new System.Drawing.Point(157, 74);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(192, 21);
+            this.comboBox1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 276);
+            this.ClientSize = new System.Drawing.Size(506, 247);
+            this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Video Player";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
